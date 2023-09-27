@@ -1,10 +1,9 @@
 <p>
   <mat-toolbar color="accent" class="logo">
     <span> </span>
-    <span> <img src="../../../assets/Logo - eLibrary - Project Gut.png" alt="Gutenber Project Logo" class="picture"></span>
+    <span> <img src="./assets/Logo - eLibrary - Project Gut.png" alt="Gutenber Project Logo" class="picture"></span>
   </mat-toolbar>
 </p>
-<!-- <app-searchbar></app-searchbar> -->
 <app-searchbar (searchAuthorEvent)="onSearch($event)"></app-searchbar>
 <p class="cards">
   <mat-card class="card" *ngFor="let book of books">
