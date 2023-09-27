@@ -1,0 +1,25 @@
+<p>
+  <mat-toolbar color="accent" class="logo">
+    <span> </span>
+    <span> <img src="../../../assets/Logo - eLibrary - Project Gut.png" alt="Gutenber Project Logo" class="picture"></span>
+  </mat-toolbar>
+</p>
+<!-- <app-searchbar></app-searchbar> -->
+<app-searchbar (searchAuthorEvent)="onSearch($event)"></app-searchbar>
+<p class="cards">
+  <mat-card class="card" *ngFor="let book of books">
+    <mat-card-header class="language">
+      <mat-card-title> {{book.id}} {{book.title}} </mat-card-title>
+      <mat-card-subtitle *ngIf="book.authors[0]"> Author(s): {{book.authors[0].name}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{book.formats['image/jpeg']}}" alt="BOOK COVER HERE">
+    <mat-card-content>
+      <p class="language">
+        <mat-card-subtitle>Languages: {{book.languages}}</mat-card-subtitle>
+      </p>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <mat-card-subtitle>Downloads: {{book.download_count}}</mat-card-subtitle>
+    </mat-card-actions>
+  </mat-card>
+</p>

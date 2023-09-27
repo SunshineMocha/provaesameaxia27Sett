@@ -1,0 +1,13 @@
+<div class="searchbar-standalone">
+  <form>
+    <mat-form-field>
+      <mat-label>Search</mat-label>
+      <input matInput type="text" [(ngModel)]="searchAuthor" name="searchInput">
+    </mat-form-field>
+  </form>
+  <div class="search-button-container">
+    <button mat-stroked-button color="secondary" class="search-button" (click)="onSearch()">
+      <mat-icon class="search-icon">search</mat-icon>
+    </button>
+  </div>
+</div>
